@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Header/Navbar section start -->
+    <header class="h-16 flex items-center shadow-sm">
+        <nav class="flex justify-between items-center w-9/12 mx-auto">
+            <div class="text-zinc-800 font-bold uppercase">
+                <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+                <p class="text-[10px] font-normal capitalize -mt-1">
+                    Get ready to Quiz and be amazed!
+                </p>
+            </div>
+            <button class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">
+                <a href="index.html">Quiz index</a>
+            </button>
+        </nav>
+    </header>
+    <!-- Header/Navbar section end -->
+
+    <!-- blog part -->
+    <main>
+        <section class="mx-auto">
+            <div class="all-QN-text w-full">
+                <div class="first-text">
+                    <h3 class="w-[95%] mx-auto h-auto bg-orange-400 capitalize text-white font-semibold text-center">
+                        what is the main difference of map, filter, find and forEach function
+                    </h3>
+                    <p class="w-[100%] lg:w-[50%] mx-auto px-5 lg:px-0 pt-3 text-justify h-auto">
+                        1. forEach() is used to execute the same code on every element in an array but does not change
+                        the array and it returns undefined.
+                        <br>
+                        2. map() executes the same code on every element in an array and returns a new array with the
+                        updated elements.
+                        <br>
+                        3. filter() checks every element in an array to see if it meets a certain criteria and returns a
+                        new array with the elements that return truthy for the criteria.
+                        <br>
+                        The find() method returns the first element in the provided array that satisfies the provided
+                        testing function. If no values satisfy the testing function, undefined is returned.
+                        <br>
+                        <br>
+                        In summary, map() and filter() both return new arrays based on certain conditions, find()
+                        returns the first element that satisfies a certain condition, and forEach() is used to perform
+                        an action on each element of an array without returning anything.
+                    </p>
+                </div>
+                <div class="first-text">
+                    <h3 class="w-[95%] mx-auto h-auto bg-orange-400 capitalize text-white font-semibold text-center">
+                        what is the difference between local storage session storage and cookies
+                    </h3>
+                    <div class="w-[100%] lg:w-[50%] mx-auto px-5 lg:px-0 pt-3 h-auto text-center">
+                        <h3 class="font-bold text-2xl">cookies</h3>
+                        <ul>
+                            <li>manually set</li>
+                            <li>browser and server</li>
+                            <li>sent with request</li>
+                            <li>capacity 4kb</li>
+                            <li>html4/ html5</li>
+                        </ul>
+                        <br>
+                        <h3 class="font-bold text-2xl">local storage</h3>
+                        <ul>
+                            <li>expire never</li>
+                            <li>browser only</li>
+                            <li>sent with requests: no</li>
+                            <li>capacity 10mb</li>
+                            <li>browser html5</li>
+                        </ul>
+                        <br>
+                        <h3 class="font-bold text-2xl">session storage</h3>
+                        <ul>
+                            <li>on tab close</li>
+                            <li>browser only</li>
+                            <li>sent with request no</li>
+                            <li>capacity 5mb</li>
+                            <li>html5</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="first-text">
+                    <h3 class="w-[95%] mx-auto h-auto bg-orange-400 capitalize text-white font-semibold text-center">
+                        what is the event loop in javascript and how does it work
+                    </h3>
+                    <p class="w-[100%] lg:w-[50%] mx-auto px-5 lg:px-0 pt-3 text-justify h-auto">
+                        Event Loop : The event loop is the secret behind JavaScript's asynchronous
+                        programming. JS executes all operations on a single thread, but using a
+                        few smart data structures, it gives us the illusion of multi-threading.
+                        <br>
+                        Easy Definition :
+                        The Event Loop has one simple job — to monitor the Call Stack and the
+                        Callback Queue or Message Queue.
+                        <br>
+                        If the Call Stack is empty, it will take the first event from the
+                        Callback queue and will push it to the Call Stack, which effectively runs it.
+                        <br>
+                        <br>
+                        function foo(b) {
+                        <br>
+                        const a = 10;
+                        <br>
+                        return a + b + 11;
+                        <br>
+                        }
+                        <br>
+                        function bar(x) {
+                        <br>
+                        const y = 3;
+                        <br>
+                        return foo(x * y);
+                        <br>
+                        }
+                        <br>
+                        const baz = bar(7); // assigns 42 to baz
+                        <br>
+                        <br>
+                        In summary, The Event Loop has one simple job — to monitor the Call Stack and the Callback
+                        Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and
+                        will push it to the Call Stack, which effectively runs it. Such an iteration is called a tick in
+                        the Event Loop.
+                    </p>
+                </div>
+                <div class="first-text">
+                    <h3 class="w-[95%] mx-auto h-auto bg-orange-400 capitalize text-white font-semibold text-center">
+                        how dose quizTimer function work
+                    </h3>
+                    <p class="w-[100%] lg:w-[50%] mx-auto px-5 lg:px-0 pt-3 text-justify h-auto">
+                        This code defines a function quizTimer that takes a single argument dismiss. If the dismiss
+                        parameter is truthy, the function clears a timer and returns. Otherwise, it sets an interval
+                        that runs every 1000 milliseconds (1 second).
+                        <br>
+                        Within the interval, the code gets a reference to an HTML element with the ID of count. It then
+                        converts the count variable (which is not shown in the code) into minutes and seconds. If the
+                        number of minutes or seconds is less than 10, the code adds a leading 0 to the string
+                        representation.
+                        <br>
+                        The code then updates the innerHTML of the countHtml element to display the current time in the
+                        format of mm:ss. It also appends a sub-element that displays the string "sec".
+                        <br>
+                        After that, the code increments count by 1. If count is greater than 60, the code checks whether
+                        it is even or odd. If it is even, the code removes the CSS class text-red-300 from the countHtml
+                        element and adds the CSS class text-red-700. If it is odd, the code removes the CSS class
+                        text-red-700 from the countHtml element and adds the CSS class text-red-300. This toggles the
+                        color of the text in the element between two shades of red every other second.
+                        <br>
+                        <br>
+                        In summary, this code appears to be a timer for a quiz or test. It updates an HTML element with
+                        the current time and changes the color of the text every other second. If the dismiss parameter
+                        is truthy, it stops the timer.
+                    </p>
+                </div>
+                <div class="first-text">
+                    <h3 class="w-[95%] mx-auto h-auto bg-orange-400 capitalize text-white font-semibold text-center">
+                        how dose chooseQuiz function work
+                    </h3>
+                    <p class="w-[100%] lg:w-[50%] mx-auto px-5 lg:px-0 pt-3 text-justify h-auto">
+                        This code defines a function chooseQuiz that takes two parameters: index and givenAns. The index
+                        parameter specifies the index of the current quiz question in an array called quizData. The
+                        givenAns parameter specifies the answer that the user has selected for the current quiz
+                        question.
+                        <br>
+                        The function first checks whether there is an object with an id property matching the id
+                        property of the current quiz question in an array called answers. This array is assumed to be
+                        defined outside of the function.
+                        <br>
+                        If there is a matching object in the answers array, the function loops through the array to find
+                        the index of that object. Once the index is found, the function uses the splice method to
+                        replace that object with a new object that combines the quiz data from quizData[index] with the
+                        selected answer from givenAns.
+                        <br>
+                        If there is no matching object in the answers array, the function uses the push method to add a
+                        new object to the array that combines the quiz data from quizData[index] with the selected
+                        answer from givenAns.
+                        <br>
+                        <br>
+                        In summary,the function calls another function called displayAnswers with the updated answers
+                        array as an argument. The purpose of displayAnswers is not shown in this code snippet, but it is
+                        likely a function that displays the user's selected answers for all quiz questions in some kind
+                        of UI.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- blog part end -->
+</body>
+
+</html>
